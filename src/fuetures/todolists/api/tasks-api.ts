@@ -1,5 +1,6 @@
-import { baseURL } from "common/instance"
-import { BaseResponse } from "common/types"
+import {baseURL} from "../../../common/instance";
+import {BaseResponse} from "../../../common/types";
+
 
 export type GetTaskResponse = {
   totalCount: number
