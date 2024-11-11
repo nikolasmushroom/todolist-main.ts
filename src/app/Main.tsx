@@ -1,12 +1,13 @@
 import { Grid } from "@mui/material"
-import { AddItemForm } from "common/components"
 import Container from "@mui/material/Container"
 import { addTodolistTC } from "../model/todolists-reducer"
 import { Todolists } from "../fuetures/todolists/Todolists/Todolists"
-import { useAppDispatch } from "common/hooks"
+import {AppDispatch} from "./store.ts";
+import {useAppDispatch} from "../common/hooks";
+import {AddItemForm} from "../common/components";
 
 export const Main = () => {
-  const dispatch = useAppDispatch()
+  const dispatch : AppDispatch = useAppDispatch()
 
   const addTodolist = (title: string) => {
     const action = addTodolistTC(title)
