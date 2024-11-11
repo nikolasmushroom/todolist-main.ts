@@ -1,20 +1,21 @@
 import { getListItemSx } from "../../Todolist.styles"
 import Checkbox from "@mui/material/Checkbox"
-import { EditableSpan } from "common/components"
 import IconButton from "@mui/material/IconButton"
 import DeleteIcon from "@mui/icons-material/Delete"
 import ListItem from "@mui/material/ListItem"
 import { ChangeEvent } from "react"
 import { removeTaskTC, updateTaskTC } from "../../../../../../model/tasks-reducer"
-import { useAppDispatch } from "common/hooks"
 import { TaskStatus, TaskType } from "../../../../api"
+import {useAppDispatch} from "../../../../../../common/hooks";
+import {AppDispatch} from "../../../../../../app/store.ts";
+import {EditableSpan} from "../../../../../../common/components";
 
 type TaskPropsType = {
   task: TaskType
   todolistId: string
 }
 export const Task = ({ task, todolistId }: TaskPropsType) => {
-  const dispatch = useAppDispatch()
+  const dispatch : AppDispatch = useAppDispatch()
   const removeTaskHandler = () => {
     dispatch(removeTaskTC(task.id, todolistId))
   }
