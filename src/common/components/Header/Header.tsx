@@ -1,15 +1,13 @@
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import { MenuButton } from "common/components";
 import Switch from "@mui/material/Switch";
 import AppBar from "@mui/material/AppBar";
-import React from "react";
 import { changeThemeModeAC } from "../../../app/app-reducer";
-import { getTheme } from "common/theme";
-import { useAppSelector } from "common/hooks";
-import { useAppDispatch } from "common/hooks";
 import { selectThemeMode } from "../../../app/App";
+import {MenuButton} from "../MenuButton/MenuButton.tsx";
+import {useAppDispatch, useAppSelector} from "../../hooks";
+import {getTheme} from "../../theme";
 export const Header = () => {
   const themeMode = useAppSelector(selectThemeMode);
   const dispatch = useAppDispatch();
