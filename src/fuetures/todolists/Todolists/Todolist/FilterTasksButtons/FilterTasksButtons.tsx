@@ -2,7 +2,7 @@ import { filterButtonsContainerSx } from "../Todolist.styles";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { changeTodolistFilter, FilterValuesType, TodolistDomainType } from "../../../../../model/todolists-reducer";
-import { useAppDispatch } from "common/hooks";
+import {useAppDispatch} from "../../../../../common/hooks";
 type FilterTasksButtonsPropsType = {
   todolist: TodolistDomainType;
 };
