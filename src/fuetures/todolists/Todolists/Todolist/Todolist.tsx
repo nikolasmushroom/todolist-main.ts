@@ -1,17 +1,18 @@
-import { AddItemForm } from "common/components";
 import { TodolistTitle } from "./TodolistTitle/TodolistTitle";
 import { Tasks } from "./Tasks/Tasks";
 import { FilterTasksButtons } from "./FilterTasksButtons/FilterTasksButtons";
 import { addTasksTC } from "../../../../model/tasks-reducer";
-import { useAppDispatch } from "common/hooks";
 import { TodolistDomainType } from "../../../../model/todolists-reducer";
+import {AppDispatch} from "../../../../app/store.ts";
+import {useAppDispatch} from "../../../../common/hooks";
+import {AddItemForm} from "../../../../common/components";
 
 type PropsType = {
   todolist: TodolistDomainType;
 };
 
 export const Todolist = ({ todolist }: PropsType) => {
-  const dispatch = useAppDispatch();
+  const dispatch : AppDispatch = useAppDispatch();
   const addTaskCallback = (title: string) => {
     dispatch(addTasksTC(todolist.id, title));
   };
