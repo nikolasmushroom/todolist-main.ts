@@ -5,9 +5,9 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["src/*"]
+      "common": ["src/common"],
     },
     "target": "esnext",
     "module": "esnext",
@@ -17,7 +17,7 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "strict": true,
-    "types": ["vite/client", "@vitest/globals"],
+    "types": ["vite/client", "@vitest/globals", "node"],
     "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.test.ts", "src/**/*.test.tsx"]
   },
   "include": [
